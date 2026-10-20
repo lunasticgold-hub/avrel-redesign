@@ -1,0 +1,7 @@
+<svg width="320" height="88" viewBox="0 0 320 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="88" height="88" rx="24" fill="#141510"/>
+  <path d="M21 65 39.2 24.8c2.1-4.6 8.6-4.6 10.7 0L68 65" stroke="#F7F4EA" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M31 51h27" stroke="#C8F36A" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="67" cy="21" r="7" fill="#6257E5"/>
+  <text x="112" y="59" fill="#141510" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-2">Avrel</text>
+</svg>
