@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Communities — Avrel</title>
+<meta name="description" content="The best 500 of 56,981 analysed communities, ranked by real visitor and activity numbers — searchable by the service you sell.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Avrel home">
+      <img src="assets/mark.svg" alt="" width="36" height="36">
+      <span>AVREL</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html" class="active" aria-current="page">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://www.avrel.in/login">Log in</a>
+      <a class="btn btn-lime" href="https://www.avrel.in/signup">Start free</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">Communities</p>
+      <h1 class="reveal">Rooms full of buyers,<br>picked by <em>real numbers.</em></h1>
+      <p class="page-sub reveal">We analysed 56,981 Reddit communities and kept the 500 where service-buyers actually show up — ranked by weekly visitors and posting activity. Below is a working slice of the directory: search it, filter it by the service you sell. The full 500 live in your dashboard.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:26px">
+    <div class="wrap">
+      <div class="dir-controls reveal">
+        <input type="search" id="dirSearch" placeholder="Search the directory — try “hiring”, “seo”, “startup”…" aria-label="Search communities">
+        <div class="dir-chips" id="dirChips" role="group" aria-label="Filter by service">
+          <button type="button" class="d-chip is-on" data-service="all">All services</button>
+          <button type="button" class="d-chip" data-service="Hiring & gig boards">Hiring &amp; gig boards</button>
+          <button type="button" class="d-chip" data-service="Startups & business owners">Startups &amp; business owners</button>
+          <button type="button" class="d-chip" data-service="SEO & marketing">SEO &amp; marketing</button>
+          <button type="button" class="d-chip" data-service="Web, design & video">Web, design &amp; video</button>
+          <button type="button" class="d-chip" data-service="Content & social media">Content &amp; social media</button>
+          <button type="button" class="d-chip" data-service="Freelancers & agencies">Freelancers &amp; agencies</button>
+        </div>
+      </div>
+      <p class="dir-count" id="dirCount">Loading the directory…</p>
+      <div class="comm-grid" id="dirGrid"></div>
+      <p class="dir-empty" id="dirEmpty" hidden>No community matches that yet — try a different word or service.</p>
+      <div class="dir-note reveal">
+        <p><strong>This page shows 48 of the 500.</strong> The full directory — refreshed daily, dealt randomly or by your service — is inside the Avrel dashboard, one click from the extension scanner.</p>
+        <a class="btn btn-lime" href="https://www.avrel.in/signup">Get the full 500 — start free</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-in reveal">
+      <img src="assets/mark.svg" alt="" width="56" height="56">
+      <h2>Someone is asking<br>for what you sell. <em>Today.</em></h2>
+      <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Be the first reply — start free</a>
+      <p>7-day free trial · No revenue in 30 days, full refund</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <a class="brand" href="index.html">
+      <img src="assets/mark.svg" alt="" width="30" height="30">
+      <span>AVREL</span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>© 2026 Avrel · Built in Bhubaneswar, India · Photos: Pexels</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

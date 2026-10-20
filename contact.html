@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Avrel</title>
+<meta name="description" content="Support, sales and direct email for Avrel — a small team in Bhubaneswar that reads every message itself.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Avrel home">
+      <img src="assets/mark.svg" alt="" width="36" height="36">
+      <span>AVREL</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://www.avrel.in/login">Log in</a>
+      <a class="btn btn-lime" href="https://www.avrel.in/signup">Start free</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">Contact</p>
+      <h1 class="reveal">Talk to a <em>human.</em></h1>
+      <p class="page-sub reveal">A small team in Bhubaneswar reads every message itself. Pick a door — they all lead to the same people.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:26px">
+    <div class="wrap">
+      <div class="contact-cards">
+        <article class="contact-card reveal">
+          <span class="spec-no">SUPPORT</span>
+          <h3>Something's broken?</h3>
+          <p>Bugs, billing, account help — or a refund claim under the guarantee.</p>
+          <a href="mailto:support@avrel.in">support@avrel.in</a>
+        </article>
+        <article class="contact-card reveal">
+          <span class="spec-no">SALES</span>
+          <h3>Agency plan questions</h3>
+          <p>Custom credits, seats and workspaces — tell us how your team sells.</p>
+          <a href="mailto:info@avrel.in">info@avrel.in</a>
+        </article>
+        <article class="contact-card reveal">
+          <span class="spec-no">DIRECT</span>
+          <h3>Everything else</h3>
+          <p>Partnerships, press, or “your product got this wrong” — we read those twice.</p>
+          <a href="mailto:abhigyan@avrel.in">abhigyan@avrel.in</a>
+        </article>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <h2>Or write it <em>here.</em></h2>
+        <p class="form-note">This form opens your own email app with the message addressed and written — nothing is stored on this page.</p>
+        <form id="contactForm" class="contact-form">
+          <label>Your name<input type="text" id="cfName" required autocomplete="name"></label>
+          <label>Your email<input type="email" id="cfEmail" required autocomplete="email"></label>
+          <label>Topic
+            <select id="cfTopic">
+              <option>Support</option><option>Agency plan / sales</option><option>Feedback</option><option>Something else</option>
+            </select>
+          </label>
+          <label class="form-wide">Message<textarea id="cfMsg" rows="6" required placeholder="Tell us what's up — the more specific, the faster the reply."></textarea></label>
+          <button type="submit" class="btn btn-lime btn-lg">Open in my email app →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-in">
+    <a class="brand" href="index.html">
+      <img src="assets/mark.svg" alt="" width="30" height="30">
+      <span>AVREL</span>
+    </a>
+    <nav aria-label="Footer">
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>© 2026 Avrel · Built in Bhubaneswar, India · Photos: Pexels</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

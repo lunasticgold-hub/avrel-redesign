@@ -10,19 +10,21 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <header class="nav" id="top">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Avrel home">
+    <a class="brand" href="index.html" aria-label="Avrel home">
       <img src="assets/mark.svg" alt="" width="36" height="36">
       <span>AVREL</span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Main">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#communities">Communities</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
     </nav>
     <div class="nav-cta">
       <a class="btn btn-ghost" href="https://www.avrel.in/login">Log in</a>
@@ -118,6 +120,31 @@
           </ul>
           <p class="vs-result">Result: you were the first credible reply. The client is yours to lose.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ PHOTO BAND + COUNTERS ============ -->
+  <section class="section section-line">
+    <div class="wrap">
+      <p class="eyebrow reveal">Who it's for</p>
+      <h2 class="reveal">Built for the person who <em>is</em> the sales team.</h2>
+      <div class="photo-duo">
+        <figure class="photo-card reveal">
+          <img src="assets/photo-3769021.jpg" alt="A freelancer smiling at her laptop" loading="lazy">
+          <figcaption><strong>The solo freelancer</strong><span>No SDR, no agency retainer — just you, a laptop, and buyers asking in public.</span></figcaption>
+        </figure>
+        <figure class="photo-card reveal">
+          <img src="assets/photo-3184291.jpg" alt="A small agency team shaking hands with a new client" loading="lazy">
+          <figcaption><strong>The small agency</strong><span>Three people, forty communities, one pipeline that never sleeps.</span></figcaption>
+        </figure>
+      </div>
+      <div class="counters reveal">
+        <div class="counter"><strong><span data-count="56981">0</span></strong><span>communities analysed</span></div>
+        <div class="counter"><strong><span data-count="500">0</span></strong><span>curated into your dashboard</span></div>
+        <div class="counter"><strong><span data-count="10">0</span></strong><span>platforms, one extension</span></div>
+        <div class="counter"><strong>30-day</strong><span>money-back guarantee</span></div>
       </div>
     </div>
   </section>
@@ -307,6 +334,7 @@
   </section>
 
   <!-- ============ FINAL CTA ============ -->
+  
   <section class="cta-band">
     <div class="wrap cta-in reveal">
       <img src="assets/mark.svg" alt="" width="56" height="56">
@@ -315,21 +343,29 @@
       <p>7-day free trial · No revenue in 30 days, full refund</p>
     </div>
   </section>
+
 </main>
+
+<div class="signal-toast" id="signalToast" role="status" aria-live="polite" hidden>
+  <span class="toast-dot"></span>
+  <div><strong id="toastTitle">New signal</strong><span id="toastText"></span></div>
+</div>
 
 <footer class="footer">
   <div class="wrap foot-in">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <img src="assets/mark.svg" alt="" width="30" height="30">
       <span>AVREL</span>
     </a>
     <nav aria-label="Footer">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="https://www.avrel.in/login">Log in</a>
+      <a href="features.html">Features</a>
+      <a href="extension.html">Extension</a>
+      <a href="communities.html">Communities</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <p>© 2026 Avrel · Built in Bhubaneswar, India</p>
+    <p>© 2026 Avrel · Built in Bhubaneswar, India · Photos: Pexels</p>
   </div>
 </footer>
 

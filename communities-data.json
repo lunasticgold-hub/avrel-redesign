@@ -1,0 +1,485 @@
+[
+ {
+  "name": "r/jobs",
+  "url": "https://www.reddit.com/r/jobs/",
+  "description": "/r/jobs is the number one community for advice relating to your career.",
+  "visitors": 1744585,
+  "contributions": 18015,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/jobsearchhacks",
+  "url": "https://www.reddit.com/r/jobsearchhacks/",
+  "description": "Forget traditional job searching - improve your odds with good tips, tricks and tactics that help you stand out.",
+  "visitors": 523083,
+  "contributions": 3152,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/UKJobs",
+  "url": "https://www.reddit.com/r/UKJobs/",
+  "description": "A community intended to provide a place for users wanting to ask questions or create discussions, all related to the UK and jobs within the UK. This is NOT a jobs board. Make sure to read the rules before posting or comm",
+  "visitors": 410878,
+  "contributions": 8655,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/remotejobsfinders",
+  "url": "https://www.reddit.com/r/remotejobsfinders/",
+  "description": "Community for remote job seekers. Real job leads, platform reviews, resume tips, and honest talk about the remote job market. No scams, no ghost listings, no \"work from home\" MLM.",
+  "visitors": 195593,
+  "contributions": 511,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/jobsearch",
+  "url": "https://www.reddit.com/r/jobsearch/",
+  "description": "The subreddit for discussing job hunting strategies and tips, hacks, or anything related to career and job search. Ranting is fine too, we all know job searching is soul-crushing. If you are tired of seeing ads targeting",
+  "visitors": 191450,
+  "contributions": 4013,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/ausjobs",
+  "url": "https://www.reddit.com/r/ausjobs/",
+  "description": "A place to discuss the job market and working in Australia.",
+  "visitors": 174553,
+  "contributions": 4686,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/CanadaJobs",
+  "url": "https://www.reddit.com/r/CanadaJobs/",
+  "description": "This is community serves, supports, and advocates for Canadian job seekers. We represent inclusivity, kindness, empathy, acceptance, and understanding for all members.",
+  "visitors": 155037,
+  "contributions": 3807,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/jobsearchhack",
+  "url": "https://www.reddit.com/r/jobsearchhack/",
+  "description": "Forget traditional job searching - improve your odds with good tips, tricks and tactics that help you stand out.",
+  "visitors": 131938,
+  "contributions": 713,
+  "services": [
+   "Hiring & gig boards"
+  ]
+ },
+ {
+  "name": "r/smallbusiness",
+  "url": "https://www.reddit.com/r/smallbusiness/",
+  "description": "This sub is not for advertisements! Questions and answers about starting, owning, and growing a small business only.",
+  "visitors": 320633,
+  "contributions": 11689,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/SaaS",
+  "url": "https://www.reddit.com/r/SaaS/",
+  "description": "Discussions and useful links for SaaS owners, online business owners, and more.",
+  "visitors": 283268,
+  "contributions": 10118,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/Entrepreneur",
+  "url": "https://www.reddit.com/r/Entrepreneur/",
+  "description": "Our community brings together individuals driven by a shared commitment to problem-solving, professional networking, and collaborative innovation, all with the goal of making a positive impact. We welcome a diverse range",
+  "visitors": 244432,
+  "contributions": 2107,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/StartUpIndia",
+  "url": "https://www.reddit.com/r/StartUpIndia/",
+  "description": "Startup Community For Indians",
+  "visitors": 136224,
+  "contributions": 3632,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/startups",
+  "url": "https://www.reddit.com/r/startups/",
+  "description": "Welcome to /r/startups, the place to discuss startup problems and solutions. Startups are companies that are designed to grow and scale rapidly. Be sure to read and follow all of our rules--we have specific places for co",
+  "visitors": 96348,
+  "contributions": 2238,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/indianstartups",
+  "url": "https://www.reddit.com/r/indianstartups/",
+  "description": "A discussion forum for entrepreneurs to network, help each other and discuss everything about startups in India.",
+  "visitors": 86003,
+  "contributions": 2076,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/micro_saas",
+  "url": "https://www.reddit.com/r/micro_saas/",
+  "description": "What is Micro SaaS? Is virtually a pocket-sized SaaS, meaning that it caters to a very specific niche. It\u2019s usually run by a small team or even two or three people. And since it\u2019s targeting a much smaller group, the reso",
+  "visitors": 81012,
+  "contributions": 3397,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/smallbusinessuk",
+  "url": "https://www.reddit.com/r/smallbusinessuk/",
+  "description": "Questions and answers about starting, owning, and growing a small business in the UK.",
+  "visitors": 65532,
+  "contributions": 1176,
+  "services": [
+   "Startups & business owners"
+  ]
+ },
+ {
+  "name": "r/webdev",
+  "url": "https://www.reddit.com/r/webdev/",
+  "description": "A community dedicated to all things web development: both front-end and back-end. For more design-related questions, try /r/web_design.",
+  "visitors": 408621,
+  "contributions": 5109,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/graphic_design",
+  "url": "https://www.reddit.com/r/graphic_design/",
+  "description": "A collaborative learning community for graphic designers at any stage, focused on education, mentorship, and mutual support.",
+  "visitors": 234030,
+  "contributions": 5928,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/davinciresolve",
+  "url": "https://www.reddit.com/r/davinciresolve/",
+  "description": "DaVinci Resolve is an industry-standard tool for post-production, including video editing, visual effects, color correction, and sound design, all in a single application! All creators, hobbyists to professionals, are we",
+  "visitors": 169060,
+  "contributions": 2145,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/VideoEditing",
+  "url": "https://www.reddit.com/r/VideoEditing/",
+  "description": "This subreddit is geared towards hobby/amateur editor. We have a professional sister sub /r/editors - and an \"Ask a Pro\" thread there for aspirational (but professional) questions.",
+  "visitors": 95865,
+  "contributions": 624,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/premiere",
+  "url": "https://www.reddit.com/r/premiere/",
+  "description": "A community-run subreddit for Adobe video editing apps including Premiere Pro, Premiere Mobile, Premiere Elements, and Media Encoder. Support, tips & tricks, discussions, and critique requests are welcome!",
+  "visitors": 85020,
+  "contributions": 927,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/Wordpress",
+  "url": "https://www.reddit.com/r/Wordpress/",
+  "description": "The place for news, articles and discussion regarding WordPress, the open source software. Wordpress.com-related questions should be posted to https://wordpress.com/forums/.",
+  "visitors": 82783,
+  "contributions": 1947,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/logodesign",
+  "url": "https://www.reddit.com/r/logodesign/",
+  "description": "A place to discuss logos and their design. Please read the rules of this sub before posting.",
+  "visitors": 80155,
+  "contributions": 3091,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/programmingHungary",
+  "url": "https://www.reddit.com/r/programmingHungary/",
+  "description": "Minden, ami a programoz\u00e1ssal, UI/UX diz\u00e1jnnal \u00e9s a magyar IT-szektorral kapcsolatos! // All about programming, UI/UX design and the Hungarian IT industry!",
+  "visitors": 37457,
+  "contributions": 1660,
+  "services": [
+   "Web, design & video"
+  ]
+ },
+ {
+  "name": "r/thickwhitegirls",
+  "url": "https://www.reddit.com/r/thickwhitegirls/",
+  "description": "Thick White Girls is a Reddit Community of everyday content creators. Amateur but quality content.",
+  "visitors": 350178,
+  "contributions": 3737,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/buhaydigital",
+  "url": "https://www.reddit.com/r/buhaydigital/",
+  "description": "For Filipinos earning a living online. This includes digital careers, content creators, startups, online businesses, streamers and other topics related to the digital economy. Feel free to discuss work and the buhay digi",
+  "visitors": 246291,
+  "contributions": 5647,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/NewTubers",
+  "url": "https://www.reddit.com/r/NewTubers/",
+  "description": "You're a YouTube Video Creator or Twitch Streamer? NewTubers is the Premiere \"Small Content Creator\" Community, created to allow up-and-coming channels to improve with resources, critiques, and cooperation among tens of ",
+  "visitors": 242351,
+  "contributions": 4692,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/socialmedia",
+  "url": "https://www.reddit.com/r/socialmedia/",
+  "description": "A sub for professional discussion about social media, news, and best practices.",
+  "visitors": 89635,
+  "contributions": 809,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/youtubers",
+  "url": "https://www.reddit.com/r/youtubers/",
+  "description": "r/YouTubers is a subreddit for content creators to discuss long- and short-form video content creation.",
+  "visitors": 38766,
+  "contributions": 241,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/aitubers",
+  "url": "https://www.reddit.com/r/aitubers/",
+  "description": "You're an AI Video Creator? AITubers part of NewTubers, the Premiere \"Small Content Creator\" Community, created to allow up-and-coming channels to improve with resources, critiques, and cooperation among tens of thousand",
+  "visitors": 23039,
+  "contributions": 640,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/copywriting",
+  "url": "https://www.reddit.com/r/copywriting/",
+  "description": "A subreddit for learning, discussing, critiquing, and sharing resources about, advertising copy... BY copywriters, FOR copywriters. (Read the FAQ before you post. Chat with other copywriters on Discord: discord.gg/copywr",
+  "visitors": 19184,
+  "contributions": 478,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/ContentCreators",
+  "url": "https://www.reddit.com/r/ContentCreators/",
+  "description": "r/ContentCreators subreddit is a community for content creators from various platforms, including YouTube, Twitch, Instagram, TikTok & Spotify.",
+  "visitors": 18666,
+  "contributions": 930,
+  "services": [
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/remotework",
+  "url": "https://www.reddit.com/r/remotework/",
+  "description": "A place to discuss remote work. Not a job board.",
+  "visitors": 167106,
+  "contributions": 2127,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/remoteworks",
+  "url": "https://www.reddit.com/r/remoteworks/",
+  "description": "A place to discuss remote work, share resources, and find remote job opportunities.",
+  "visitors": 66175,
+  "contributions": 1531,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/Upwork",
+  "url": "https://www.reddit.com/r/Upwork/",
+  "description": "r/upwork is an independent, unofficial subreddit. We are not affiliated with, endorsed by, or employed by Upwork, Inc.",
+  "visitors": 46871,
+  "contributions": 1882,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/RemoteWorkers",
+  "url": "https://www.reddit.com/r/RemoteWorkers/",
+  "description": "This group provides a list of legitimate work at home job opportunities, ways to make money from home, easy tasks, sites that pay daily, smartphone apps and many other options to help you earn at home.",
+  "visitors": 42922,
+  "contributions": 5798,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/freelance",
+  "url": "https://www.reddit.com/r/freelance/",
+  "description": "Articles of interest for freelancers and people who want to become one. Violating the rules (https://old.reddit.com/r/freelance/about/rules) will cause your post/comment will be removed and you will be banned permanently",
+  "visitors": 23936,
+  "contributions": 482,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/FreelanceIndia",
+  "url": "https://www.reddit.com/r/FreelanceIndia/",
+  "description": "A space for Indian freelancers and founders to connect, collaborate, and grow. Ask questions, share leads, post jobs, or just hang out. Open to everyone - clients from anywhere are welcome to hire Indian talent.",
+  "visitors": 22038,
+  "contributions": 2386,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/BEFreelance",
+  "url": "https://www.reddit.com/r/BEFreelance/",
+  "description": "A community for Belgian freelancers to share tips to start out and optimise workflows.",
+  "visitors": 15667,
+  "contributions": 366,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/freelanceWriters",
+  "url": "https://www.reddit.com/r/freelanceWriters/",
+  "description": "A place by and for freelance writers of all kinds to discuss and share every facet of freelance writing.",
+  "visitors": 15147,
+  "contributions": 74,
+  "services": [
+   "Freelancers & agencies"
+  ]
+ },
+ {
+  "name": "r/InstagramMarketing",
+  "url": "https://www.reddit.com/r/InstagramMarketing/",
+  "description": "All things White Hat and Black Hat Instagram.",
+  "visitors": 137393,
+  "contributions": 2764,
+  "services": [
+   "SEO & marketing"
+  ]
+ },
+ {
+  "name": "r/marketing",
+  "url": "https://www.reddit.com/r/marketing/",
+  "description": "For marketing communications + advertising industry professionals to discuss and ask questions related to marketing strategy, media planning, digital, social, search, campaigns, data science, email, user experience, cont",
+  "visitors": 70536,
+  "contributions": 1049,
+  "services": [
+   "SEO & marketing",
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/DigitalMarketing",
+  "url": "https://www.reddit.com/r/DigitalMarketing/",
+  "description": "A place for digital marketers to come together to have professional conversations on all things digital. No promotional posts. This rule will be strictly enforced.",
+  "visitors": 64689,
+  "contributions": 3034,
+  "services": [
+   "SEO & marketing"
+  ]
+ },
+ {
+  "name": "r/SocialMediaMarketing",
+  "url": "https://www.reddit.com/r/SocialMediaMarketing/",
+  "description": "r/SocialMediaMarketing is a place for SMM professionals to share industry-relevant information, discuss best practices, and provide constructive critique.",
+  "visitors": 56705,
+  "contributions": 963,
+  "services": [
+   "SEO & marketing",
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/SEO",
+  "url": "https://www.reddit.com/r/SEO/",
+  "description": "The leading authority on all things SEO: AI SEO, GEO, LLM SEO, Technical SEO, Content SEO and SEO Architecture. Bring your ideas, problems, thoughts, questions, issues and we'll work it out together. A helpful and though",
+  "visitors": 55924,
+  "contributions": 3234,
+  "services": [
+   "SEO & marketing"
+  ]
+ },
+ {
+  "name": "r/advertising",
+  "url": "https://www.reddit.com/r/advertising/",
+  "description": "THIS IS NOT A PLACE TO ADVERTISE. YOU WILL BE BANNED. r/Advertising: Is for ad creators, students, copywriters, and anyone else who is finely honing their reverse banner blindness for professional reasons.",
+  "visitors": 54803,
+  "contributions": 1874,
+  "services": [
+   "SEO & marketing",
+   "Content & social media"
+  ]
+ },
+ {
+  "name": "r/influencermarketing",
+  "url": "https://www.reddit.com/r/influencermarketing/",
+  "description": "Share popular threads and discussions around influencer marketing. Learn how to work with popular social media creators and bloggers to promote your brand.",
+  "visitors": 51085,
+  "contributions": 740,
+  "services": [
+   "SEO & marketing"
+  ]
+ },
+ {
+  "name": "r/PPC",
+  "url": "https://www.reddit.com/r/PPC/",
+  "description": "The hub for Pay-per-Click (PPC) and performance advertising. Discuss strategy, scaling, and tactics across Google Ads, Meta Ads, Microsoft Ads, Amazon Ads, emerging AI networks, and similar ad platforms.",
+  "visitors": 45884,
+  "contributions": 1521,
+  "services": [
+   "SEO & marketing"
+  ]
+ }
+]
