@@ -124,8 +124,136 @@ if (form) {
     const name = document.getElementById('cfName').value.trim();
     const email = document.getElementById('cfEmail').value.trim();
     const msg = document.getElementById('cfMsg').value.trim();
+    const status = document.getElementById('cfStatus')?.value || '';
+    const pageUsed = document.getElementById('cfPage')?.value || '';
+    const expect = (document.getElementById('cfExpect')?.value || '').trim();
     const subject = encodeURIComponent(`[Avrel website] ${topic} — ${name}`);
-    const body = encodeURIComponent(`${msg}\n\n— ${name} (${email})`);
+    const lines = [msg, ''];
+    if (status) lines.push(`Status: ${status}`);
+    if (pageUsed) lines.push(`Was using: ${pageUsed}`);
+    if (expect) lines.push(`Expected: ${expect}`);
+    lines.push('', `— ${name} (${email})`);
+    const body = encodeURIComponent(lines.join('\n'));
     location.href = `mailto:${dest}?subject=${subject}&body=${body}`;
   });
+}
+
+// Promo countdown → ends at the end of the current month
+const promoCount = document.getElementById('promoCountdown');
+if (promoCount) {
+  const pad = n => String(n).padStart(2, '0');
+  const tickPromo = () => {
+    const now = new Date();
+    const end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+    let s = Math.max(0, Math.floor((end - now) / 1000));
+    const d = Math.floor(s / 86400); s -= d * 86400;
+    const h = Math.floor(s / 3600); s -= h * 3600;
+    const m = Math.floor(s / 60); const sec = s - m * 60;
+    promoCount.textContent = `Ends in ${d}d ${pad(h)}:${pad(m)}:${pad(sec)}`;
+  };
+  tickPromo();
+  setInterval(tickPromo, 1000);
+}
+
+// Product assistant — quick rule-based answers from real product facts
+const aBtn = document.getElementById('assistantBtn');
+const aPanel = document.getElementById('assistantPanel');
+if (aBtn && aPanel) {
+  const aBody = document.getElementById('assistantBody');
+  const aInput = document.getElementById('assistantInput');
+  const ANSWERS = {
+    pricing: 'Starter is <b>$129/mo</b> (Reddit + Facebook Groups, 1,000 lead + 1,000 draft credits). Pro is <b>$229/mo</b> — adds LinkedIn, 5,000 + 5,000 credits, 3 seats. Agency is custom. Full details on the <a href="pricing.html">pricing page</a>.',
+    scan: 'Install the extension, pair it with a one-time code, then open a community feed and hit <b>Start scan</b>. Avrel reads the posts on your screen, scores them for buying intent, and sends matches to your dashboard with a draft attached. Walkthrough: <a href="extension.html">the extension page</a>.',
+    safe: 'Avrel reads only what is already visible on your screen, and drafts are yours to review. Sequences — if you switch them on — run under daily caps and pacing you set. Your platform password is never asked for; pairing is by one-time code.',
+    trial: 'The trial is <b>7 days free</b>: one platform of your choice, 50 saved-lead credits and 50 draft credits — enough to run the full loop from scan to reply. Start from any <b>Start free</b> button on this site.',
+    refund: 'The guarantee: use Avrel for 30 days — if it produced <b>no revenue</b>, claim a <b>full refund</b> of your first payment within 60 days of paying. Email support@avrel.in and it gets processed.',
+    platforms: 'Scanning today: Reddit, Facebook Groups, LinkedIn, Slack, Discord and Indie Hackers. On the roadmap (V2): X, Product Hunt, Telegram and WhatsApp Communities. Which ones you can use depends on your plan — see <a href="pricing.html">pricing</a>.',
+    human: 'Of course — email <b>support@avrel.in</b> (product/billing help) or <b>info@avrel.in</b> (sales), or use the <a href="contact.html">contact page</a>. A small team in Bhubaneswar replies within two business days, usually sooner.',
+    fallback: 'I can answer quick questions about pricing, scanning, safety, the trial, platforms and the refund guarantee. For anything else, a human is better: <a href="contact.html">contact page</a> or support@avrel.in.',
+  };
+  const answerFor = raw => {
+    const q = raw.toLowerCase();
+    if (/(price|pricing|cost|plan|pay)/.test(q)) return ANSWERS.pricing;
+    if (/(refund|guarantee|money back)/.test(q)) return ANSWERS.refund;
+    if (/(trial|free)/.test(q)) return ANSWERS.trial;
+    if (/(safe|ban|risk|allowed|tos)/.test(q)) return ANSWERS.safe;
+    if (/(platform|reddit|linkedin|facebook|slack|discord)/.test(q)) return ANSWERS.platforms;
+    if (/(scan|extension|install|chrome|work)/.test(q)) return ANSWERS.scan;
+    if (/(human|contact|email|support|talk|call)/.test(q)) return ANSWERS.human;
+    return ANSWERS.fallback;
+  };
+  const addMsg = (html, who) => {
+    const div = document.createElement('div');
+    div.className = 'a-msg ' + (who === 'user' ? 'a-user' : 'a-bot');
+    div.innerHTML = html;
+    aBody.appendChild(div);
+    aBody.scrollTop = aBody.scrollHeight;
+  };
+  const toggle = open => {
+    aPanel.hidden = !open;
+    aBtn.setAttribute('aria-expanded', String(open));
+    if (open) aInput.focus();
+  };
+  aBtn.addEventListener('click', () => toggle(aPanel.hidden));
+  document.getElementById('assistantClose').addEventListener('click', () => toggle(false));
+  document.querySelectorAll('#assistantChips button').forEach(chip =>
+    chip.addEventListener('click', () => addMsg(ANSWERS[chip.dataset.q] || ANSWERS.fallback, 'bot')));
+  document.getElementById('assistantForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = aInput.value.trim();
+    if (!v) return;
+    addMsg(v.replace(/</g, '&lt;'), 'user');
+    aInput.value = '';
+    setTimeout(() => addMsg(answerFor(v), 'bot'), 250);
+  });
+}
+
+// Lead calculator (home) — live model: 10–15 leads/platform/day, 22 days
+const lc = document.getElementById('leadCalc');
+if (lc) {
+  const slider = document.getElementById('lcPlatforms');
+  const out = document.getElementById('lcPlatformsOut');
+  const daily = document.getElementById('lcDaily');
+  const monthly = document.getElementById('lcMonthly');
+  const plan = document.getElementById('lcPlan');
+  const update = () => {
+    const p = Number(slider.value);
+    const lo = p * 10, hi = p * 15;
+    out.textContent = p;
+    daily.textContent = `${lo}–${hi}`;
+    monthly.textContent = `${(lo * 22).toLocaleString('en-IN')}–${(hi * 22).toLocaleString('en-IN')}`;
+    if (p <= 2) plan.innerHTML = 'Fits the <b>Starter</b> plan — 1,000 saved-lead credits cover it.';
+    else if (p === 3) plan.innerHTML = 'You want <b>Pro</b> — the 3-platform club, 5,000 saved-lead credits.';
+    else plan.innerHTML = 'That is <b>Agency</b> territory — the 5-platform club, 25,000 credits.';
+  };
+  slider.addEventListener('input', update);
+  update();
+}
+
+// ROI calculator (pricing)
+const rc = document.getElementById('roiCalc');
+if (rc) {
+  const leads = document.getElementById('roiLeads');
+  const rate = document.getElementById('roiRate');
+  const rateOut = document.getElementById('roiRateOut');
+  const value = document.getElementById('roiValue');
+  const planSel = document.getElementById('roiPlan');
+  const clients = document.getElementById('roiClients');
+  const revenue = document.getElementById('roiRevenue');
+  const multiple = document.getElementById('roiMultiple');
+  const money = n => '$' + Math.round(n).toLocaleString('en-US');
+  const update = () => {
+    const L = Math.max(0, Number(leads.value) || 0);
+    const R = Number(rate.value);
+    const V = Math.max(0, Number(value.value) || 0);
+    const C = Number(planSel.value);
+    const cl = L * R / 100;
+    const rev = cl * V;
+    rateOut.textContent = R + '%';
+    clients.textContent = (Math.round(cl * 10) / 10).toLocaleString('en-US');
+    revenue.textContent = money(rev);
+    multiple.textContent = C > 0 && rev > 0 ? Math.round(rev / C).toLocaleString('en-US') + '×' : '—';
+  };
+  [leads, rate, value, planSel].forEach(el => el.addEventListener('input', update));
+  update();
 }

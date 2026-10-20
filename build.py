@@ -15,9 +15,59 @@ NAV_LINKS = [
     ("extension.html", "Extension", "extension"),
     ("communities.html", "Communities", "communities"),
     ("pricing.html", "Pricing", "pricing"),
+    ("blog.html", "Blog", "blog"),
     ("about.html", "About", "about"),
     ("faq.html", "FAQ", "faq"),
 ]
+
+PROMO_BANNER = """
+<div class="promo-banner" role="region" aria-label="Prepay offer">
+  <p><strong>Prepay &amp; save:</strong> Save 20% when you pay 3 months together.
+  <span class="promo-count" id="promoCountdown">Ends soon</span></p>
+  <a href="pricing.html">See plans →</a>
+</div>
+"""
+
+CONSULT_BAND = """
+<section class="consult-band">
+  <div class="wrap consult-in reveal">
+    <div>
+      <h2>Book a focused consultation.</h2>
+      <p>Bring your current lead process, your questions, or an extension issue — leave with a plan.</p>
+    </div>
+    <a class="btn btn-lime btn-lg" href="https://calendly.com/lunasticgold/consultation" target="_blank" rel="noopener">Schedule a consultation</a>
+  </div>
+</section>
+"""
+
+ASSISTANT = """
+<button class="assistant-btn" id="assistantBtn" aria-label="Open the Avrel product assistant" aria-expanded="false">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.6-.3-3.7-.8L3 20l.9-5.3A8.5 8.5 0 1 1 21 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+  <span>Ask Avrel</span>
+</button>
+<div class="assistant-panel" id="assistantPanel" hidden role="dialog" aria-label="Avrel product assistant">
+  <div class="assistant-head">
+    <strong>Avrel assistant</strong>
+    <span>Quick answers, no waiting</span>
+    <button class="assistant-close" id="assistantClose" aria-label="Close assistant">✕</button>
+  </div>
+  <div class="assistant-body" id="assistantBody">
+    <div class="a-msg a-bot">Hi — ask me about pricing, how scanning works, safety, the free trial, or the refund guarantee. Tap a topic or type your question.</div>
+  </div>
+  <div class="assistant-chips" id="assistantChips">
+    <button type="button" data-q="pricing">Pricing</button>
+    <button type="button" data-q="scan">How scanning works</button>
+    <button type="button" data-q="safe">Is it safe?</button>
+    <button type="button" data-q="trial">Free trial</button>
+    <button type="button" data-q="refund">Refund guarantee</button>
+    <button type="button" data-q="human">Talk to a human</button>
+  </div>
+  <form class="assistant-form" id="assistantForm">
+    <input type="text" id="assistantInput" placeholder="Type a question…" aria-label="Type a question" autocomplete="off">
+    <button type="submit">Ask</button>
+  </form>
+</div>
+"""
 
 def head(title, desc):
     return f"""<!DOCTYPE html>
@@ -64,7 +114,7 @@ def nav(active):
 </header>
 """
 
-FOOTER = """
+FOOTER = CONSULT_BAND + """
 <footer class="footer">
   <div class="wrap foot-in">
     <a class="brand" href="index.html">
@@ -76,13 +126,19 @@ FOOTER = """
       <a href="extension.html">Extension</a>
       <a href="communities.html">Communities</a>
       <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookie-policy.html">Cookies</a>
     </nav>
     <p>© 2026 Avrel · Built in Bhubaneswar, India · Photos: Pexels</p>
   </div>
 </footer>
-
+""" + ASSISTANT + """
 <script src="script.js"></script>
 </body>
 </html>
@@ -100,7 +156,7 @@ CTA_BAND = """
 """
 
 def page(filename, title, desc, active, body):
-    html = head(title, desc) + nav(active) + "\n<main>\n" + body + "\n</main>\n" + FOOTER
+    html = head(title, desc) + PROMO_BANNER + nav(active) + "\n<main>\n" + body + "\n</main>\n" + FOOTER
     (ROOT / filename).write_text(html)
     print("built", filename)
 
@@ -152,10 +208,35 @@ def build_home():
   <div><strong id="toastTitle">New signal</strong><span id="toastText"></span></div>
 </div>
 """
+    lead_calc = """
+  <!-- ============ LEAD CALCULATOR ============ -->
+  <section class="section section-line">
+    <div class="wrap calc-wrap">
+      <div class="reveal">
+        <p class="eyebrow">Lead calculator</p>
+        <h2>How many buyers are<br>you <em>walking past?</em></h2>
+        <p class="section-sub">The working model behind Avrel: an active scanner finds roughly <strong>10–15 qualified leads per platform, per day</strong>. Move the slider — that's a 22-day working month.</p>
+      </div>
+      <div class="calc-card reveal" id="leadCalc">
+        <label class="calc-label">Platforms you scan <strong id="lcPlatformsOut">2</strong></label>
+        <input type="range" id="lcPlatforms" min="1" max="5" step="1" value="2" aria-label="Platforms you scan">
+        <div class="calc-outputs">
+          <div><strong id="lcDaily">20–30</strong><span>qualified leads / day</span></div>
+          <div><strong id="lcMonthly">440–660</strong><span>qualified leads / month</span></div>
+        </div>
+        <p class="calc-plan" id="lcPlan">Fits the <b>Starter</b> plan — 1,000 saved-lead credits cover it.</p>
+        <p class="calc-note">An average for illustration, not a guarantee. Your niche, keywords and platform activity decide the real number.</p>
+      </div>
+    </div>
+  </section>
+"""
+    feat_marker = "  <!-- ============ FEATURES (spec sheet) ============ -->"
+    body = body.replace(feat_marker, lead_calc + "\n" + feat_marker)
+
     html = head(
         "Avrel — The first reply wins the client",
         "Buyers ask strangers who to hire — in Reddit threads, LinkedIn feeds and Facebook Groups. Avrel finds those posts first, scores them, and writes your reply.",
-    ) + nav("home") + "\n" + body + "\n" + toast + FOOTER
+    ) + PROMO_BANNER + nav("home") + "\n" + body + "\n" + toast + FOOTER
     (ROOT / "index.html").write_text(html)
     print("built index.html")
 
@@ -487,6 +568,39 @@ PRICING_BODY = """
         </table>
       </div>
 
+      <div class="calc-wrap roi-wrap reveal">
+        <div>
+          <p class="eyebrow">ROI calculator</p>
+          <h2>Do the maths<br>before you <em>pay.</em></h2>
+          <p class="section-sub">Feed in your own numbers — how many leads you'd work, how often you close, what a client is worth. If the maths doesn't beat the plan price, don't buy the plan.</p>
+        </div>
+        <div class="calc-card" id="roiCalc">
+          <div class="roi-grid">
+            <label class="calc-label">Leads you work / month
+              <input type="number" id="roiLeads" value="220" min="0" step="10">
+            </label>
+            <label class="calc-label">Close rate <strong id="roiRateOut">5%</strong>
+              <input type="range" id="roiRate" min="1" max="30" step="1" value="5" aria-label="Close rate percent">
+            </label>
+            <label class="calc-label">Average client value ($)
+              <input type="number" id="roiValue" value="1500" min="0" step="50">
+            </label>
+            <label class="calc-label">Plan
+              <select id="roiPlan">
+                <option value="129" selected>Starter — $129/mo</option>
+                <option value="229">Pro — $229/mo</option>
+              </select>
+            </label>
+          </div>
+          <div class="calc-outputs">
+            <div><strong id="roiClients">11</strong><span>new clients / month</span></div>
+            <div><strong id="roiRevenue">$16,500</strong><span>expected revenue</span></div>
+            <div><strong id="roiMultiple">128×</strong><span>return on the plan</span></div>
+          </div>
+          <p class="calc-note">Illustrative only — your offer, niche and follow-up decide the real result. The guarantee covers the downside: no revenue in 30 days, full refund.</p>
+        </div>
+      </div>
+
       <div class="faq-list" style="margin-top:64px">
         <details class="faq reveal">
           <summary>How does the free trial work?</summary>
@@ -627,9 +741,14 @@ CONTACT_BODY = """
         </article>
       </div>
 
+      <div class="promise-strip reveal">
+        <p><strong>Response time:</strong> we reply within two business days — usually much sooner.</p>
+        <p><strong>Who we serve:</strong> freelancers, agencies, founders, and growth teams worldwide.</p>
+      </div>
+
       <div class="contact-form-wrap reveal">
         <h2>Or write it <em>here.</em></h2>
-        <p class="form-note">This form opens your own email app with the message addressed and written — nothing is stored on this page.</p>
+        <p class="form-note">This form opens your own email app with the message addressed and written — nothing is stored on this page. The more of it you fill, the faster the fix.</p>
         <form id="contactForm" class="contact-form">
           <label>Your name<input type="text" id="cfName" required autocomplete="name"></label>
           <label>Your email<input type="email" id="cfEmail" required autocomplete="email"></label>
@@ -638,13 +757,165 @@ CONTACT_BODY = """
               <option>Support</option><option>Agency plan / sales</option><option>Feedback</option><option>Something else</option>
             </select>
           </label>
-          <label class="form-wide">Message<textarea id="cfMsg" rows="6" required placeholder="Tell us what's up — the more specific, the faster the reply."></textarea></label>
+          <label>Are you…
+            <select id="cfStatus">
+              <option>Just exploring</option><option>In my free trial</option><option>A paying customer</option>
+            </select>
+          </label>
+          <label>What were you using?
+            <select id="cfPage">
+              <option>The dashboard</option><option>The Chrome extension</option><option>The leads page</option><option>Billing</option><option>Signup or login</option><option>Something else</option>
+            </select>
+          </label>
+          <label>What did you expect to happen? (optional)<input type="text" id="cfExpect" placeholder="e.g. the scan would pick up the posts in my group"></label>
+          <label class="form-wide">Message<textarea id="cfMsg" rows="6" required placeholder="Tell us what's up — the page you were on, what happened, any error message you saw."></textarea></label>
           <button type="submit" class="btn btn-lime btn-lg">Open in my email app →</button>
         </form>
       </div>
     </div>
   </section>
 """
+
+# ------------------------------------------------------------------ blog ----
+BLOG_POSTS = [
+    ("find-freelance-clients-on-reddit-without-getting-banned", "Reddit",
+     "Find Freelance Clients on Reddit Without Getting Banned",
+     "The subreddits worth your time, the posts that signal a real buyer, and the behaviour that gets freelancers shadow-banned."),
+    ("linkedin-lead-generation-for-small-agencies-manual-playbook", "LinkedIn",
+     "LinkedIn Lead Generation for Small Agencies: The Manual Playbook",
+     "A sustainable, human-run LinkedIn routine for small agencies — no automation spam, no burned accounts."),
+    ("best-facebook-groups-for-freelancers-to-find-us-clients", "Facebook",
+     "Best Facebook Groups for Freelancers to Find US Clients",
+     "How to spot the groups where US clients actually hire, and the ones that are just freelancers shouting at each other."),
+    ("complete-guide-to-lead-scoring-community-sourced-leads", "Guide",
+     "The Complete Guide to Lead Scoring for Community-Sourced Leads",
+     "Intent, urgency, fit and timing — how to score a community post so your follow-up list sorts itself."),
+    ("how-to-write-manual-outreach-reply-that-doesnt-sound-like-spam", "Outreach",
+     "How to Write a Manual Outreach Reply That Doesn't Sound Like Spam",
+     "The anatomy of a reply that gets answered: specific, short, and clearly written by a person who read the post."),
+    ("manual-safe-community-outreach", "Guide",
+     "Manual, Safe Community Outreach: The Playbook",
+     "Avrel's ground rules for community outreach that respects platform rules and community norms — and still books calls."),
+    ("how-many-leads-per-day-from-one-community-platform", "Research",
+     "How Many Leads Per Day Can One Community Platform Actually Give You?",
+     "The honest maths behind the 10–15 qualified leads per platform per day model, and what moves the number."),
+    ("where-us-founders-ask-for-help-slack-discord-communities", "Research",
+     "Where US Founders Ask for Help: Slack & Discord Communities",
+     "Founder communities are where urgent, time-boxed requests surface first. Here's how to be in the room, usefully."),
+    ("community-led-growth-vs-cold-outreach-2026", "Growth",
+     "Community-Led Growth vs Cold Outreach (2026)",
+     "Reply rates, trust, and cost per conversation — how showing up where buyers ask compares with cold blasting."),
+    ("can-spam-and-platform-tos-basics-for-community-outreach", "Compliance",
+     "CAN-SPAM and Platform ToS Basics for Community Outreach",
+     "The legal and platform rules that govern outreach, in plain English — what you can do, and what gets accounts killed."),
+    ("how-to-build-a-weekly-seo-content-system-for-community-led-saas", "Content",
+     "How to Build a Weekly SEO Content System for a Community-Led SaaS",
+     "Turn the questions your buyers ask in communities into a content engine that compounds."),
+]
+BLOG_BODY = """
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Avrel blog</p>
+      <h1 class="reveal">Field notes on finding<br>clients in <em>communities.</em></h1>
+      <p class="page-sub reveal">Everything we publish comes from the work itself — scanning rooms, scoring posts, writing replies that get answered. Full articles open on avrel.in.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:26px">
+    <div class="wrap">
+      <div class="blog-grid">
+""" + "\n".join(
+    f'''        <article class="post-card reveal">
+          <span class="comm-svc">{tag}</span>
+          <h3><a href="https://www.avrel.in/blog/{slug}" target="_blank" rel="noopener">{title}</a></h3>
+          <p>{excerpt}</p>
+          <div class="post-meta"><span>Sep 2026</span><a href="https://www.avrel.in/blog/{slug}" target="_blank" rel="noopener">Read on avrel.in →</a></div>
+        </article>'''
+    for slug, tag, title, excerpt in BLOG_POSTS
+) + """
+      </div>
+    </div>
+  </section>
+""" + CTA_BAND
+
+# ----------------------------------------------------------------- legal ----
+def legal_body(title, intro, sections, extra=""):
+    secs = "\n".join(
+        f'        <section class="legal-sec reveal"><h2>{h}</h2><p>{b}</p></section>'
+        for h, b in sections
+    )
+    return f"""
+  <section class="page-hero">
+    <div class="wrap legal-wrap">
+      <p class="eyebrow reveal">Legal</p>
+      <h1 class="reveal">{title}</h1>
+      <p class="page-sub reveal">{intro}</p>
+      <p class="legal-updated">Last updated October 2026</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:6px">
+    <div class="wrap legal-wrap">
+{secs}
+{extra}
+    </div>
+  </section>
+"""
+
+PRIVACY_BODY = legal_body(
+    "Privacy Policy",
+    "How Avrel handles lead data, knowledge documents and retention — and what the extension does and does not collect.",
+    [
+        ("What this product does",
+         "avrel.in operates Avrel for visible community opportunity research, customer and market intelligence, and human-reviewed action preparation."),
+        ("What the extension reads",
+         "The extension scans only visible content on pages you open, and only after you start a scan manually. It does not read pages in the background, and it does not access content behind logins you have not opened yourself."),
+        ("What syncs to your workspace",
+         "When sync is enabled, we store lead snippets, source URLs, matched signals, scores, status, notes, knowledge-base context, and usage events in your workspace."),
+        ("Knowledge documents",
+         "Uploaded knowledge documents are limited to PDF, DOCX, and TXT files up to 10 MB per file."),
+        ("Retention and deletion",
+         "Default lead retention is 90 days unless you delete leads earlier. You can delete leads and uploaded knowledge files at any time from the dashboard."),
+        ("What we never do",
+         "We do not collect platform passwords, do not bypass private access, and do not auto-send outreach of any kind."),
+    ],
+    extra="""      <div class="legal-card reveal">
+        <h2>Questions about your data</h2>
+        <p>Email <a href="mailto:support@avrel.in">support@avrel.in</a> and we will respond within two business days.</p>
+      </div>""",
+)
+
+TERMS_BODY = legal_body(
+    "Terms of Service",
+    "What you're buying, what the trial includes, what you are responsible for, and the refund guarantee — in plain words.",
+    [
+        ("What you are buying",
+         "avrel.in provides Avrel for compliant lead research, lead qualification, knowledge-base assisted drafting, and manual outreach workflows."),
+        ("Trial",
+         "The 7-day trial includes 50 saved lead credits and 50 Conversation draft credits on one platform of your choice. After the trial, continued access requires a paid plan."),
+        ("Your responsibilities",
+         "You are responsible for complying with the terms of each platform you scan, the rules of the communities you participate in, applicable consent requirements, and applicable privacy laws including CAN-SPAM."),
+        ("What this product will not do",
+         "Automatic DM sending, automatic comments, automatic replies, automatic posts, auto follow-up blasting, scraping hidden data, and evasion behaviour are not part of this product and will not be added."),
+        ("Refund guarantee",
+         "Use Avrel for 30 days. If it produced no revenue for you, claim a full refund of your first payment within 60 days of paying — email support@avrel.in and we process it."),
+        ("Changes to these terms",
+         "We will email account holders at least 14 days before any material change to these terms takes effect."),
+    ],
+)
+
+COOKIE_BODY = legal_body(
+    "Cookie Policy",
+    "Avrel uses essential cookies for authentication and may use product analytics cookies where enabled. Nothing exotic, nothing sold.",
+    [
+        ("What cookies do here",
+         "Cookies support login sessions, workspace access, security, preferences, and product analytics."),
+        ("Essential cookies",
+         "Authentication and security cookies keep you signed in and protect your workspace. The site does not work without these, so they are always on."),
+        ("Analytics cookies",
+         "Where analytics is enabled, product analytics cookies help us understand which pages and features get used, so we can fix what confuses people. They are product analytics — not advertising trackers."),
+        ("Your controls",
+         "You can block or clear cookies in your browser settings at any time; signing in again will simply set fresh essential cookies. Questions: support@avrel.in."),
+    ],
+)
 
 # ----------------------------------------------------------------- main ----
 if __name__ == "__main__":
@@ -670,4 +941,16 @@ if __name__ == "__main__":
     page("contact.html", "Contact — Avrel",
          "Support, sales and direct email for Avrel — a small team in Bhubaneswar that reads every message itself.",
          "contact", CONTACT_BODY)
+    page("blog.html", "Blog — Avrel",
+         "Field notes on finding clients in online communities: Reddit, LinkedIn and Facebook playbooks, lead scoring, outreach craft and compliance basics.",
+         "blog", BLOG_BODY)
+    page("privacy.html", "Privacy Policy — Avrel",
+         "How Avrel handles lead data, knowledge documents, retention, and what the extension does and does not collect.",
+         "", PRIVACY_BODY)
+    page("terms.html", "Terms of Service — Avrel",
+         "What you are buying, the trial, your responsibilities, and the no-revenue full-refund guarantee.",
+         "", TERMS_BODY)
+    page("cookie-policy.html", "Cookie Policy — Avrel",
+         "Essential cookies for authentication and security, product analytics where enabled, and your controls.",
+         "", COOKIE_BODY)
     print("done")
