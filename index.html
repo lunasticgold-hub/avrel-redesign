@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avrel — Find buyers hiding in online communities</title>
-<meta name="description" content="Avrel scans Reddit, LinkedIn, Facebook Groups and 7 more platforms for people asking to hire, recommend or buy — scores every post and drafts the reply.">
-<link rel="icon" href="assets/avrel-mark.svg" type="image/svg+xml">
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<title>Avrel — The first reply wins the client</title>
+<meta name="description" content="Buyers ask strangers who to hire — in Reddit threads, LinkedIn feeds and Facebook Groups. Avrel finds those posts first, scores them, and writes your reply.">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,8 +14,8 @@
 <header class="nav" id="top">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Avrel home">
-      <img src="assets/avrel-mark.svg" alt="" width="34" height="34">
-      <span>avrel<i>.</i></span>
+      <img src="assets/mark.svg" alt="" width="36" height="36">
+      <span>AVREL</span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Main">
       <a href="#how">How it works</a>
@@ -37,222 +37,205 @@
 <main>
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="wrap hero-in">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="pulse-dot"></span> Community opportunity intelligence</p>
-        <h1>Your next client is asking for help in a community <em>right now.</em></h1>
-        <p class="hero-sub">Avrel scans Reddit, LinkedIn, Facebook Groups and 7 more platforms for people asking to hire, recommend or buy — scores every post, explains <strong>why now</strong>, and drafts the reply. You just review and send.</p>
-        <div class="hero-cta">
-          <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Start 7-day free trial</a>
-          <a class="btn btn-outline btn-lg" href="#how">See how it works</a>
-        </div>
-        <p class="hero-note">No revenue in your first 30 days? <strong>Full refund.</strong> That is the deal.</p>
-        <dl class="hero-stats">
-          <div><dt>56,981</dt><dd>communities analysed</dd></div>
-          <div><dt>500</dt><dd>best ones picked for you</dd></div>
-          <div><dt>10</dt><dd>platforms covered</dd></div>
-        </dl>
+    <div class="wrap">
+      <p class="eyebrow reveal"><span class="pulse-dot"></span> For freelancers &amp; agencies who sell services</p>
+      <h1 class="reveal">THE FIRST REPLY<br>WINS THE <em>CLIENT.</em></h1>
+      <p class="hero-sub reveal">Every day, buyers walk into Reddit threads, LinkedIn feeds and Facebook Groups and ask a room full of strangers: <strong>“Who should I hire?”</strong> Avrel hears the question the minute it's posted, scores it, and writes your answer. You just hit send — first.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Start free — 7 days</a>
+        <a class="btn btn-outline btn-lg" href="#how">How it works ↓</a>
       </div>
 
-      <!-- Live-scan product visual -->
-      <div class="hero-visual reveal" aria-hidden="true">
-        <div class="browser">
-          <div class="browser-bar">
-            <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
-            <span class="b-url">reddit.com/r/smallbusiness</span>
-            <span class="b-ext"><img src="assets/avrel-mark.svg" alt="" width="16" height="16"> Avrel scanning</span>
+      <!-- Signal board -->
+      <div class="board reveal" aria-label="Example buyer signals Avrel catches">
+        <div class="board-head">
+          <span class="board-title">SIGNALS CAUGHT IN THE WILD</span>
+          <span class="board-live"><span class="pulse-dot"></span> Scanning 10 platforms</span>
+        </div>
+        <article class="signal">
+          <div class="sig-main">
+            <p class="sig-quote">“Need a designer for my Shopify store — budget is ready, just can't find anyone reliable. Recommendations?”</p>
+            <p class="sig-meta"><span class="sig-plat">Reddit · r/smallbusiness</span><span>posted 4 min ago · 0 replies so far</span></p>
           </div>
-          <div class="feed">
-            <div class="scan-beam"></div>
-            <article class="post">
-              <header><span class="p-avatar">SM</span><span class="p-meta">u/storeowner_mike · r/smallbusiness · 12m</span><span class="chip chip-dim">Checked</span></header>
-              <p>What POS system is everyone using this year? Ours keeps crashing at checkout…</p>
-            </article>
-            <article class="post post-hot">
-              <header><span class="p-avatar av-lime">JK</span><span class="p-meta">u/jenna_k · r/smallbusiness · 4m</span><span class="chip chip-hot">Hot · 92</span></header>
-              <p>“Need a designer for my Shopify store — budget is ready, just can't find anyone reliable. Recommendations?”</p>
-              <div class="why-now">
-                <span class="why-label">Why now</span>
-                <span>Buying intent + budget mentioned + posted 4 min ago. Nobody has answered yet.</span>
-              </div>
-              <div class="draft-row">
-                <span class="draft-tag">Draft ready</span>
-                <span class="draft-text">“Hi Jenna — I redesign Shopify stores for small brands. Happy to share two before/afters…”</span>
-              </div>
-            </article>
-            <article class="post">
-              <header><span class="p-avatar">AR</span><span class="p-meta">u/alexrivera · r/smallbusiness · 26m</span><span class="chip chip-warm">Warm · 64</span></header>
-              <p>Our Google traffic fell off a cliff last month. Is SEO still worth paying for in 2026?</p>
-            </article>
-            <article class="post">
-              <header><span class="p-avatar">TP</span><span class="p-meta">u/techpriya · r/smallbusiness · 41m</span><span class="chip chip-dim">Checked</span></header>
-              <p>Finally hit 1,000 orders! Here's what I learned in year one…</p>
-            </article>
+          <div class="sig-side">
+            <span class="sig-score score-hot">92 · HOT</span>
+            <span class="sig-why">Budget stated. Nobody has answered. This is a first-reply race.</span>
           </div>
-          <div class="browser-foot">
-            <span><strong>3 new posts</strong> checked</span>
-            <span><strong>1 hot lead</strong> drafted</span>
-            <span class="foot-live"><span class="pulse-dot"></span> Live</span>
+        </article>
+        <article class="signal">
+          <div class="sig-main">
+            <p class="sig-quote">“Our Google traffic fell off a cliff. Anyone know a good SEO person who works with small stores?”</p>
+            <p class="sig-meta"><span class="sig-plat">Facebook Group · Ecommerce Owners</span><span>posted 19 min ago · 2 replies</span></p>
           </div>
+          <div class="sig-side">
+            <span class="sig-score score-warm">78 · WARM</span>
+            <span class="sig-why">Asking for a person, not a tool. Pain is current and specific.</span>
+          </div>
+        </article>
+        <article class="signal">
+          <div class="sig-main">
+            <p class="sig-quote">“Fired our agency last week. Who do you use for LinkedIn outreach that actually books calls?”</p>
+            <p class="sig-meta"><span class="sig-plat">LinkedIn · Founders feed</span><span>posted 41 min ago · 6 replies</span></p>
+          </div>
+          <div class="sig-side">
+            <span class="sig-score score-warm">71 · WARM</span>
+            <span class="sig-why">Competitor just got fired. The seat is open — today, not someday.</span>
+          </div>
+        </article>
+        <div class="board-foot">
+          <span><strong>56,981</strong> communities analysed</span>
+          <span><strong>500</strong> best rooms picked for you</span>
+          <span><strong>1</strong> extension does the walking</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PLATFORM MARQUEE ============ -->
-  <section class="marquee-band" aria-label="Platforms Avrel covers">
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Reddit</span><i></i><span>LinkedIn</span><i></i><span>Facebook Groups</span><i></i><span>X</span><i></i><span>Product Hunt</span><i></i><span>Indie Hackers</span><i></i><span>Discord</span><i></i><span>Slack</span><i></i><span>Telegram</span><i></i><span>WhatsApp Communities</span><i></i>
-        <span>Reddit</span><i></i><span>LinkedIn</span><i></i><span>Facebook Groups</span><i></i><span>X</span><i></i><span>Product Hunt</span><i></i><span>Indie Hackers</span><i></i><span>Discord</span><i></i><span>Slack</span><i></i><span>Telegram</span><i></i><span>WhatsApp Communities</span><i></i>
+  <!-- ============ THE PROBLEM ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="versus">
+        <article class="vs-card vs-old reveal">
+          <p class="vs-label">THE OLD WAY</p>
+          <h3>Doomscroll &amp; pray</h3>
+          <ul>
+            <li>Two hours inside five subreddits and three groups</li>
+            <li>The good post was yesterday. Eleven people already replied</li>
+            <li>“I'll check again tomorrow” — you don't</li>
+            <li>Warm leads die quietly in a forgotten tab</li>
+          </ul>
+          <p class="vs-result">Result: whoever replied first got the client. It wasn't you.</p>
+        </article>
+        <div class="vs-badge reveal" aria-hidden="true">VS</div>
+        <article class="vs-card vs-new reveal">
+          <p class="vs-label">THE AVREL WAY</p>
+          <h3>Open the dashboard. Reply.</h3>
+          <ul>
+            <li>Scored buyer posts waiting, newest first</li>
+            <li>Every lead shows <b>why now</b> — in plain words, with proof</li>
+            <li>A draft in your voice is already written</li>
+            <li>Follow-ups nag you before a lead goes cold</li>
+          </ul>
+          <p class="vs-result">Result: you were the first credible reply. The client is yours to lose.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ============ HOW IT WORKS ============ -->
-  <section class="section" id="how">
+  <section class="section section-line" id="how">
     <div class="wrap">
       <p class="eyebrow reveal">How it works</p>
-      <h2 class="reveal">From noise to a drafted reply in <em>four steps.</em></h2>
+      <h2 class="reveal">Point it. It hunts.<br>You <em>reply first.</em></h2>
       <div class="steps">
         <article class="step reveal">
           <span class="step-num">01</span>
-          <h3>Tell it your market</h3>
-          <p>Your services, keywords and the communities your buyers live in. Avrel starts you with the 500 best communities out of 56,981 analysed — picked by real weekly activity, matched to your services.</p>
+          <h3>Point it at your buyers</h3>
+          <p>Describe what you sell. Avrel loads your keywords and opens your dashboard on the rooms where your buyers actually gather — starting with the 500 best communities out of 56,981 we analysed, matched to your service.</p>
         </article>
         <article class="step reveal">
           <span class="step-num">02</span>
-          <h3>It watches the conversations</h3>
-          <p>The Avrel extension scans the feeds you open — hiring posts, recommendation requests, competitor complaints, “who can help with…” moments — and checks every post against your keywords.</p>
+          <h3>It hunts while you work</h3>
+          <p>One browser extension walks the feeds you open — Reddit, LinkedIn, Facebook Groups, X and six more — and checks every post for buying intent: hiring, asking for recommendations, firing a competitor, naming a budget.</p>
         </article>
         <article class="step reveal">
           <span class="step-num">03</span>
-          <h3>Every lead gets a score + a reason</h3>
-          <p>No black box. Each lead shows its score, the exact phrases that triggered it, and a plain-English “why now” — so you can judge it in seconds.</p>
-        </article>
-        <article class="step reveal">
-          <span class="step-num">04</span>
-          <h3>You review, Avrel follows up</h3>
-          <p>Drafts are written for you in your voice. Approve, edit or skip. Due follow-ups surface automatically, so warm leads never quietly die in a tab somewhere.</p>
+          <h3>You reply first</h3>
+          <p>Matches land in your dashboard scored and explained, draft already written. Approve it, tweak it, or queue a follow-up sequence with daily caps. First credible reply usually takes the conversation. Now it's yours.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEATURES BENTO ============ -->
-  <section class="section section-alt" id="features">
+  <!-- ============ FEATURES (spec sheet) ============ -->
+  <section class="section" id="features">
     <div class="wrap">
-      <p class="eyebrow reveal">Features</p>
-      <h2 class="reveal">Built for people who sell <em>services.</em></h2>
-      <p class="section-sub reveal">Freelancers and agencies don't need another CRM. They need to be in the right conversation first — with a reply ready.</p>
+      <p class="eyebrow reveal">The toolkit</p>
+      <h2 class="reveal">Everything between<br>“someone's asking” and <em>“booked call”.</em></h2>
 
-      <div class="bento">
-        <article class="cell cell-wide reveal">
-          <div class="cell-head"><h3>Explainable lead scoring</h3><span class="cell-tag">Why-now engine</span></div>
-          <p>Intent, urgency, budget signals and fit — every score links back to the exact words in the post. If Avrel can't explain it, it doesn't score it.</p>
-          <div class="score-demo" aria-hidden="true">
-            <div class="score-ring"><strong>92</strong><span>Hot</span></div>
-            <ul class="score-reasons">
-              <li><b>+35</b> “Need a designer” — direct hiring intent</li>
-              <li><b>+15</b> Budget mentioned in the post</li>
-              <li><b>+10</b> Posted 4 minutes ago — unanswered</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="cell reveal">
-          <div class="cell-head"><h3>Search like you mean it</h3></div>
-          <p>Full-text search across every saved lead — name, post, community, keyword — with platform, temperature, status, score and date filters.</p>
-          <div class="chip-row" aria-hidden="true">
-            <span class="f-chip is-on">Hot only</span><span class="f-chip">Reddit</span><span class="f-chip">Score 70+</span><span class="f-chip">This week</span><span class="f-chip">Overdue</span>
-          </div>
-        </article>
-
-        <article class="cell reveal">
-          <div class="cell-head"><h3>Follow-ups that nag you, not them</h3></div>
-          <p>Overdue badges and a “needs a nudge” queue. Set a date once — Avrel remembers, so you don't have to.</p>
-          <div class="nudge" aria-hidden="true"><span class="nudge-dot"></span> 3 follow-ups due today <b>· oldest: 2 days</b></div>
-        </article>
-
-        <article class="cell reveal">
-          <div class="cell-head"><h3>Sequences, with a seatbelt</h3></div>
-          <p>Turn approved drafts into a follow-up sequence with daily caps and human-like pacing. You set the limits — the engine respects them.</p>
-          <div class="seq" aria-hidden="true">
-            <span>Day 0 · Intro</span><i></i><span>Day 3 · Bump</span><i></i><span>Day 7 · Breakup</span>
-          </div>
-        </article>
-
-        <article class="cell reveal">
-          <div class="cell-head"><h3>The extension does the walking</h3><span class="cell-tag">v2.6</span></div>
-          <p>One click connects your browser. Scan any feed on 10 platforms; leads sync straight to your dashboard with the source post attached.</p>
-          <a class="cell-link" href="https://www.avrel.in/downloads/Avrel.zip">Get the extension →</a>
-        </article>
-
-        <article class="cell cell-wide reveal">
-          <div class="cell-head"><h3>Start where the buyers already are</h3><span class="cell-tag">New</span></div>
-          <p>Your dashboard opens with recommended communities — refreshed picks from the best 500, or filtered by your service: hiring boards, startup hangouts, marketing, design, content.</p>
-          <div class="chip-row" aria-hidden="true">
-            <span class="f-chip is-on">Hiring &amp; gig boards</span><span class="f-chip">Startups &amp; owners</span><span class="f-chip">SEO &amp; marketing</span><span class="f-chip">Web, design &amp; video</span><span class="f-chip">Content &amp; social</span>
-          </div>
-        </article>
+      <div class="spec reveal">
+        <div class="spec-row">
+          <span class="spec-no">F—01</span>
+          <h3>Scores you can cross-examine</h3>
+          <p>Every lead carries its score, the exact phrases that earned it, and a plain-English “why now”. No black box — if Avrel can't explain a lead, it doesn't show you one.</p>
+          <span class="spec-tag">Why-now engine</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-no">F—02</span>
+          <h3>Search that finds the one post</h3>
+          <p>Full-text search over every saved lead — name, post, community, keyword — filtered by platform, temperature, status, score and date. Bulk actions when the list gets long.</p>
+          <span class="spec-tag">Lead library</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-no">F—03</span>
+          <h3>Follow-ups that refuse to be forgotten</h3>
+          <p>Overdue badges and a “needs a nudge” queue. Set the date once; Avrel does the remembering your brain keeps outsourcing to luck.</p>
+          <span class="spec-tag">Pipeline hygiene</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-no">F—04</span>
+          <h3>Sequences with a seatbelt</h3>
+          <p>Turn an approved draft into a Day 0 / Day 3 / Day 7 sequence. Daily caps and human pacing are set by you, enforced by the engine — ambition included, recklessness not.</p>
+          <span class="spec-tag">Outreach engine</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-no">F—05</span>
+          <h3>One extension, ten platforms</h3>
+          <p>Install once, connect with a code, scan anywhere: Reddit, LinkedIn, Facebook Groups, X, Product Hunt, Indie Hackers, Discord, Slack, Telegram, WhatsApp Communities.</p>
+          <span class="spec-tag">Extension v2.6</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-no">F—06</span>
+          <h3>Rooms picked for your trade</h3>
+          <p>Your dashboard deals you fresh communities daily — or deal by service: hiring boards for gigs today, founder rooms for retainers tomorrow.</p>
+          <span class="spec-tag">New · The 500</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ COMMUNITIES ============ -->
-  <section class="section" id="communities">
+  <!-- ============ COMMUNITIES (ranked table) ============ -->
+  <section class="section section-line" id="communities">
     <div class="wrap">
       <p class="eyebrow reveal">The 500</p>
-      <h2 class="reveal">Not “communities”. <em>Rooms full of buyers.</em></h2>
-      <p class="section-sub reveal">We analysed 56,981 Reddit communities and kept the 500 where service-buyers actually show up — ranked by weekly visitors and real posting activity, refreshed into your dashboard as random daily picks.</p>
-      <div class="comm-grid">
-        <article class="comm-card reveal">
-          <header><strong>r/forhire</strong><span class="chip chip-hot">Hiring board</span></header>
-          <p>Freelancers and clients meet here — gigs posted daily with budgets attached.</p>
-          <footer><span><b>27.9K</b> weekly visitors</span><span><b>3,492</b> posts &amp; comments / week</span></footer>
-        </article>
-        <article class="comm-card reveal">
-          <header><strong>r/smallbusiness</strong><span class="chip chip-warm">Owners</span></header>
-          <p>Owners asking each other who to hire for design, SEO, ads and everything else.</p>
-          <footer><span><b>320K</b> weekly visitors</span><span><b>11,689</b> posts &amp; comments / week</span></footer>
-        </article>
-        <article class="comm-card reveal">
-          <header><strong>r/B2BForHire</strong><span class="chip chip-hot">Hiring board</span></header>
-          <p>B2B services only. Small room, extremely high signal — built for agencies.</p>
-          <footer><span><b>36.9K</b> weekly visitors</span><span><b>7,790</b> posts &amp; comments / week</span></footer>
-        </article>
-        <article class="comm-card reveal">
-          <header><strong>r/Entrepreneur</strong><span class="chip chip-warm">Founders</span></header>
-          <p>Founders comparing tools and vendors — and asking who can just do it for them.</p>
-          <footer><span><b>244K</b> weekly visitors</span><span><b>2,107</b> posts &amp; comments / week</span></footer>
-        </article>
-        <article class="comm-card reveal">
-          <header><strong>r/SEO</strong><span class="chip chip-dim">Marketing</span></header>
-          <p>Where traffic problems get described in public — usually right before someone hires help.</p>
-          <footer><span><b>55.9K</b> weekly visitors</span><span><b>3,234</b> posts &amp; comments / week</span></footer>
-        </article>
-        <article class="comm-card reveal">
-          <header><strong>r/SaaS</strong><span class="chip chip-warm">Founders</span></header>
-          <p>SaaS founders trading growth tactics — a steady source of marketing and dev briefs.</p>
-          <footer><span><b>283K</b> weekly visitors</span><span><b>10,118</b> posts &amp; comments / week</span></footer>
-        </article>
+      <h2 class="reveal">We read 56,981 communities<br>so you only walk into <em>the right 500.</em></h2>
+      <p class="section-sub reveal">Ranked on real numbers — weekly visitors and actual posting activity, not vibes. A few of the rooms your dashboard will deal you:</p>
+
+      <div class="table-wrap reveal">
+        <table class="comm-table">
+          <thead>
+            <tr><th>#</th><th>Community</th><th>Why it's gold</th><th>Weekly visitors</th><th>Posts &amp; comments / wk</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="rank">01</td><td><strong>r/forhire</strong><span class="t-plat">Hiring board</span></td><td>Gigs posted daily, budgets attached. The front door of freelance work.</td><td>27.9K</td><td>3,492</td></tr>
+            <tr><td class="rank">02</td><td><strong>r/smallbusiness</strong><span class="t-plat">Owners</span></td><td>Owners asking peers who to hire for design, SEO, ads — everything.</td><td>320K</td><td>11,689</td></tr>
+            <tr><td class="rank">03</td><td><strong>r/B2BForHire</strong><span class="t-plat">Hiring board</span></td><td>B2B services only. Small room, absurd signal density. Agency catnip.</td><td>36.9K</td><td>7,790</td></tr>
+            <tr><td class="rank">04</td><td><strong>r/SaaS</strong><span class="t-plat">Founders</span></td><td>Founders trading growth tactics — and quietly shopping for help.</td><td>283K</td><td>10,118</td></tr>
+            <tr><td class="rank">05</td><td><strong>r/Entrepreneur</strong><span class="t-plat">Founders</span></td><td>Vendor comparisons and “who can just do this for me?” threads, weekly.</td><td>244K</td><td>2,107</td></tr>
+            <tr><td class="rank">06</td><td><strong>r/SEO</strong><span class="t-plat">Marketing</span></td><td>Traffic emergencies described in public, right before someone hires.</td><td>55.9K</td><td>3,234</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p class="table-note reveal">…and 494 more, shuffled into your dashboard daily — or filtered by the service you sell.</p>
     </div>
   </section>
 
-  <!-- ============ PRICING ============ -->
-  <section class="section section-alt" id="pricing">
+  <!-- ============ GUARANTEE + PRICING ============ -->
+  <section class="section" id="pricing">
     <div class="wrap">
+      <div class="guarantee reveal">
+        <span class="g-mark">THE GUARANTEE</span>
+        <p>No revenue in your first 30 days of using Avrel? <strong>Full refund</strong> — claim it any time within 60 days of your first payment. We'd rather earn the renewal than argue about the refund.</p>
+      </div>
+
       <p class="eyebrow reveal">Pricing</p>
-      <h2 class="reveal">One client pays for <em>a year of Avrel.</em></h2>
-      <p class="section-sub reveal">Start free for 7 days. Every paid plan carries the same promise: no revenue in your first 30 days of use, full refund — claim it any time within 60 days of your first payment.</p>
+      <h2 class="reveal">One client covers <em>a year.</em></h2>
 
       <div class="pricing-grid">
         <article class="price-card reveal">
           <h3>Starter</h3>
           <p class="price"><strong>$129</strong><span>/month</span></p>
-          <p class="price-for">For solo freelancers getting their first community leads.</p>
+          <p class="price-for">Solo freelancers landing their first community clients.</p>
           <ul>
             <li>Reddit + Facebook Groups</li>
             <li>1,000 lead credits / month</li>
@@ -262,26 +245,24 @@
           </ul>
           <a class="btn btn-outline w-full" href="https://www.avrel.in/signup">Start free trial</a>
         </article>
-
         <article class="price-card price-featured reveal">
           <span class="price-badge">Most picked</span>
           <h3>Pro</h3>
           <p class="price"><strong>$229</strong><span>/month</span></p>
-          <p class="price-for">For freelancers and small agencies working several platforms at once.</p>
+          <p class="price-for">Freelancers and small agencies working several platforms at once.</p>
           <ul>
-            <li>Everything in Starter, plus LinkedIn</li>
+            <li>Everything in Starter + LinkedIn</li>
             <li>5,000 lead credits / month</li>
             <li>3 seats</li>
             <li>Sequences with daily caps</li>
-            <li>Recommended communities by service</li>
+            <li>Communities recommended by service</li>
           </ul>
           <a class="btn btn-lime w-full" href="https://www.avrel.in/signup">Start free trial</a>
         </article>
-
         <article class="price-card reveal">
           <h3>Agency</h3>
           <p class="price"><strong>Custom</strong></p>
-          <p class="price-for">For teams running outreach across many clients and brands.</p>
+          <p class="price-for">Teams running outreach across many clients and brands.</p>
           <ul>
             <li>All 10 platforms</li>
             <li>Custom credits &amp; seats</li>
@@ -291,35 +272,35 @@
           <a class="btn btn-outline w-full" href="https://www.avrel.in/contact">Talk to us</a>
         </article>
       </div>
-      <p class="pricing-note reveal">Pay for 3 months upfront and save 20%. Prices in USD.</p>
+      <p class="pricing-note reveal">Every plan starts with a 7-day free trial. Pay 3 months upfront, save 20%. Prices in USD.</p>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section class="section" id="faq">
+  <section class="section section-line" id="faq">
     <div class="wrap faq-wrap">
       <p class="eyebrow reveal">FAQ</p>
-      <h2 class="reveal">Straight answers.</h2>
+      <h2 class="reveal">Asked in communities,<br>answered <em>here.</em></h2>
       <div class="faq-list">
         <details class="faq reveal">
-          <summary>How does Avrel actually find leads?</summary>
-          <p>You add the Chrome extension and open the communities where your buyers hang out — a subreddit, a Facebook group, a LinkedIn feed. Avrel reads the visible posts, checks them against your keywords and buying-intent signals, scores the matches and syncs them to your dashboard with the source post attached.</p>
+          <summary>So… how does it actually find the leads?</summary>
+          <p>You install the Chrome extension, connect it with a code, and open the communities where your buyers spend time. Avrel reads what's on your screen, checks each post against your keywords and buying-intent signals, scores the matches and parks them in your dashboard — source post attached, draft included.</p>
         </details>
         <details class="faq reveal">
-          <summary>Will this get my Reddit or LinkedIn account banned?</summary>
-          <p>Avrel only reads what's already on your screen and drafts messages for your review — you decide what gets sent. If you enable sequences, they run under daily caps and human-like pacing that you set. Nothing is posted from your account without your setup and approval.</p>
+          <summary>Is my Reddit / LinkedIn account safe?</summary>
+          <p>Avrel reads only what's already on your screen and writes drafts for your review — nothing posts itself without your setup. Sequences, if you turn them on, run under daily caps and pacing you choose. Your accounts stay yours; the final click stays human.</p>
         </details>
         <details class="faq reveal">
-          <summary>Which platforms are supported?</summary>
-          <p>Reddit and Facebook Groups on Starter; LinkedIn joins on Pro; Agency covers all 10 — Reddit, LinkedIn, Facebook Groups, X, Product Hunt, Indie Hackers, Discord, Slack, Telegram and WhatsApp Communities.</p>
+          <summary>Which platforms does it cover?</summary>
+          <p>Ten: Reddit, LinkedIn, Facebook Groups, X, Product Hunt, Indie Hackers, Discord, Slack, Telegram and WhatsApp Communities. Starter opens Reddit + Facebook Groups, Pro adds LinkedIn, Agency unlocks the full ten.</p>
         </details>
         <details class="faq reveal">
-          <summary>What if I get no revenue from it?</summary>
-          <p>Then you don't pay for it. Use Avrel for 30 days; if it produced no revenue, claim a full refund any time within 60 days of your first payment. No exit interview, no forms in triplicate.</p>
+          <summary>And if it makes me no money?</summary>
+          <p>Then it costs you no money. Use it for 30 days — no revenue means a full refund, claimable within 60 days of your first payment. See the guarantee above; we put it in writing, in big letters, on purpose.</p>
         </details>
         <details class="faq reveal">
-          <summary>I'm a freelancer, not an agency. Is this for me?</summary>
-          <p>Yes — Starter is built for solo freelancers, and your dashboard recommends communities by service: hiring boards if you want gigs today, owner and founder communities if you want retainers tomorrow.</p>
+          <summary>Freelancer here, not an agency. Worth it?</summary>
+          <p>That's who Starter was built for. Your dashboard even deals communities by trade — hiring boards when you need a gig this week, founder rooms when you're building toward retainers.</p>
         </details>
       </div>
     </div>
@@ -328,10 +309,10 @@
   <!-- ============ FINAL CTA ============ -->
   <section class="cta-band">
     <div class="wrap cta-in reveal">
-      <img src="assets/avrel-mark.svg" alt="" width="52" height="52">
-      <h2>The conversation is already happening.<br><em>Be the first reply.</em></h2>
-      <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Start 7-day free trial</a>
-      <p>No revenue in 30 days? Full refund.</p>
+      <img src="assets/mark.svg" alt="" width="56" height="56">
+      <h2>Someone is asking<br>for what you sell. <em>Today.</em></h2>
+      <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Be the first reply — start free</a>
+      <p>7-day free trial · No revenue in 30 days, full refund</p>
     </div>
   </section>
 </main>
@@ -339,8 +320,8 @@
 <footer class="footer">
   <div class="wrap foot-in">
     <a class="brand" href="#top">
-      <img src="assets/avrel-mark.svg" alt="" width="28" height="28">
-      <span>avrel<i>.</i></span>
+      <img src="assets/mark.svg" alt="" width="30" height="30">
+      <span>AVREL</span>
     </a>
     <nav aria-label="Footer">
       <a href="#how">How it works</a>

@@ -1,10 +1,12 @@
 # Avrel — website redesign (preview)
 
-A ground-up redesign of the avrel.in marketing site: dark editorial style in the
-real brand colours (warm black, cream, purple, lime), Clash Display + Satoshi
-type, a live-scan hero visual, platform marquee, bento features, real community
-data from the 56,981-subreddit dataset, and the live pricing.
+Redesign of the avrel.in marketing site. **Direction v2 (current): "The first
+reply wins the client"** — black/cream/lime identity, new signal-pulse logo
+mark (`assets/mark.svg`), Cabinet Grotesk + Satoshi type, signal-board hero,
+old-way-vs-Avrel comparison, spec-sheet features, ranked community table,
+guarantee band, live pricing. All product facts, prices, plan features and
+links (login / signup / extension download / contact) match the real product.
 
-Static HTML/CSS/JS — no build step. This is a design preview only; the live
-product stays on the current site until this design is approved and ported
-into the main Next.js app.
+Static HTML/CSS/JS — no build step. Design preview only; the live product
+stays on the current site until this design is approved and ported into the
+main Next.js app.
