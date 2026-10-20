@@ -77,7 +77,7 @@ def head(title, desc):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/avrel-mark.svg" type="image/svg+xml">
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -97,8 +97,8 @@ def nav(active):
 <header class="nav" id="top">
   <div class="wrap nav-in">
     <a class="brand" href="index.html" aria-label="Avrel home">
-      <img src="assets/mark.svg" alt="" width="36" height="36">
-      <span>AVREL</span>
+      <img src="assets/avrel-mark.svg" alt="" width="36" height="36">
+      <span class="brand-word">avrel<i>.</i></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Main">
       {links}
@@ -118,8 +118,8 @@ FOOTER = CONSULT_BAND + """
 <footer class="footer">
   <div class="wrap foot-in">
     <a class="brand" href="index.html">
-      <img src="assets/mark.svg" alt="" width="30" height="30">
-      <span>AVREL</span>
+      <img src="assets/avrel-mark.svg" alt="" width="30" height="30">
+      <span class="brand-word">avrel<i>.</i></span>
     </a>
     <nav aria-label="Footer">
       <a href="features.html">Features</a>
@@ -147,7 +147,7 @@ FOOTER = CONSULT_BAND + """
 CTA_BAND = """
   <section class="cta-band">
     <div class="wrap cta-in reveal">
-      <img src="assets/mark.svg" alt="" width="56" height="56">
+      <img src="assets/avrel-mark.svg" alt="" width="56" height="56">
       <h2>Someone is asking<br>for what you sell. <em>Today.</em></h2>
       <a class="btn btn-lime btn-lg" href="https://www.avrel.in/signup">Be the first reply — start free</a>
       <p>7-day free trial · No revenue in 30 days, full refund</p>
