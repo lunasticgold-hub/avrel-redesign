@@ -200,7 +200,8 @@ def build_home():
   </section>
 """
     marker = "  <!-- ============ HOW IT WORKS ============ -->"
-    body = body.replace(marker, photo_band + "\n" + marker)
+    if "photo-duo" not in body:
+        body = body.replace(marker, photo_band + "\n" + marker)
 
     toast = """
 <div class="signal-toast" id="signalToast" role="status" aria-live="polite" hidden>
@@ -231,7 +232,8 @@ def build_home():
   </section>
 """
     feat_marker = "  <!-- ============ FEATURES (spec sheet) ============ -->"
-    body = body.replace(feat_marker, lead_calc + "\n" + feat_marker)
+    if 'id="leadCalc"' not in body:
+        body = body.replace(feat_marker, lead_calc + "\n" + feat_marker)
 
     html = head(
         "Avrel — The first reply wins the client",
